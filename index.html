@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+<head ng-app="gemStore">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="app.js"></script>
+	<title>Angular!</title>
+</head>
+	<body ng-controller="StoreController as store">
+
+		<div class="product row" ng-hide="store.product.soldOut">
+			 <h3>
+			 	{{store.product.name}}
+			 	<em class="pull-right">${{store.products}}</em>
+			 </h3>
+			 <button ng-hide="!store.product.canPurchase">Add to Cart</button>
+		</div>
+	</body>
+</html>
